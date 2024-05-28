@@ -1,0 +1,12 @@
+
+<div>
+  <input type="text" [(ngModel)]="pokemonBuscado" placeholder="Enter Pokemon ID or Name" />
+  <button (click)="BuscarPokemon(pokemonBuscado)">Search</button>
+  <div *ngIf="pokemon">
+    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" />
+    <p>Tipos:</p>
+    <ul>
+      <li *ngFor="let type of pokemon.types">{{ type.type.name }}</li>
+    </ul>
+    <app-llocs-manel-dominguez [pokemonName]="pokemon.name"></app-llocs-manel-dominguez>
+  </div>

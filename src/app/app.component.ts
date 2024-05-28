@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import {HomeManelDominguezComponent}  from "./home-manel-dominguez/home-manel-dominguez.component";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-component',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterModule, FormsModule, CommonModule,HomeManelDominguezComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'ExamenUF4';
